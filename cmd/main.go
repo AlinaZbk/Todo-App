@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"github.com/AlinaZbk/todo-app"
+	"github.com/AlinaZbk/go_ToDo-App"
 	"github.com/AlinaZbk/go_Todo-App/pkg/handler"
 )
 
