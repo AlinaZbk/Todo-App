@@ -5,16 +5,15 @@ import (
 )
 
 type Handler struct {
-
 }
 
 func (h *Handler) InitRoutes() *gin.Engine {
-	router := gin.New()
+	router := gin.New() //создаем новый роутер
 
 	auth := router.Group("/auth")
 	{
-		auth.POST("/sign-up")
-		auth.POST("/sign-in")
+		auth.POST("/sign-up") //обработчик регистрации
+		auth.POST("/sign-in") //обработчик входа
 	}
 
 	api := router.Group("/api")

@@ -7,9 +7,9 @@ import (
 )
 
 func main(){
-	handlers := new(handler.Handler)
-	srv := new(todo.Server)
-	if err := srv.Run("8000", handlers.InitRoutes()); err != nil {
+	handlers := new(handler.Handler) //создаем обработчик http-запросов
+	srv := new(todo.Server) //созадем http-сервер
+	if err := srv.Run("8000", handlers.InitRoutes()); err != nil { //запускаем сервер
 		log.Fatalf("error occured while running http server: %s", err.Error())
 	
 	}

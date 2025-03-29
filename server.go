@@ -14,14 +14,14 @@ type Server struct {
 func (s *Server) Run(port string, handler http.Handler) error {
 	s.httpServer = &http.Server{
 		Addr:           ":" + port,
-		Handler:        handler,
-		MaxHeaderBytes: 1 << 20, //1 Mb
-		ReadTimeout:    10 * time.Second,
-		WriteTimeout:   10 * time.Second,
+		Handler:        handler, //передаем все маршруты
+		MaxHeaderBytes: 1 << 20, //1 Mb - лимит заголовков
+		ReadTimeout:    10 * time.Second, //время ожидания запроса
+		WriteTimeout:   10 * time.Second, //время ожидания ответа
 	}
 	return s.httpServer.ListenAndServe() //под капотом запускает бесконечный цикл for
 }
 
-func (s *Server) Shutdown(ctx context.Context) error { //будем использовать при выходе из приложения
+func (s *Server) Shutdown(ctx context.Context) error { //для остановки сервера
 	return s.httpServer.Shutdown(ctx)
 }
