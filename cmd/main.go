@@ -2,8 +2,8 @@ package main
 
 import (
 	"log"
-	"github.com/AlinaZbk/go_ToDo-App"
-	"github.com/AlinaZbk/go_Todo-App/pkg/handler"
+	"github.com/AlinaZbk/ToDo-App"
+	"github.com/AlinaZbk/Todo-App/pkg/handler"
 )
 
 func main(){

@@ -1,4 +1,4 @@
-module github.com/AlinaZbk/go_ToDo-App
+module github.com/AlinaZbk/ToDo-App
 
 go 1.23.6
 
