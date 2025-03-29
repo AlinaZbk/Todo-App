@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"github.com/AlinaZbk/ToDo-App"
-	"github.com/AlinaZbk/Todo-App/pkg/handler"
+	"github.com/AlinaZbk/ToDo-App/pkg/handler"
 )
 
 func main(){
